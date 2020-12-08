@@ -34,9 +34,12 @@ export class App extends Component {
     const isShowStatistics = total > 0;
 
     return (
-      <div>
+      <>
         <Section title={'Please leave feedback'}>
-          <FeedbackOptions onLeaveFeedback={this.handleAddFeedback} />
+          <FeedbackOptions
+            onLeaveFeedback={this.handleAddFeedback}
+            options={Object.keys(this.state)}
+          />
         </Section>
 
         <Section title="Statistics">
@@ -51,7 +54,7 @@ export class App extends Component {
           )}
           {!isShowStatistics && <Notification message="No feedback given" />}
         </Section>
-      </div>
+      </>
     );
   }
 }
