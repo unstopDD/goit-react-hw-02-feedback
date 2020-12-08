@@ -1,3 +1,7 @@
+.box {
+  display: flex;
+}
+
 .button {
   all: unset;
   font-weight: bold;

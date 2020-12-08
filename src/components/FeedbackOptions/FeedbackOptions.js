@@ -3,7 +3,7 @@ import s from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   return (
-    <>
+    <div className={s.box}>
       {options.map(option => (
         <button
           className={s.button}
@@ -14,7 +14,7 @@ const FeedbackOptions = ({ onLeaveFeedback, options }) => {
           {option[0].toUpperCase() + option.slice(1)}
         </button>
       ))}
-    </>
+    </div>
   );
 };
 
